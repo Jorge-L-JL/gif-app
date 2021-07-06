@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import GifApp from "./GifApp";
+import GifApp from "./GifApp.js";
 
 import './index.css'
 
