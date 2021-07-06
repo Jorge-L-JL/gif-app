@@ -2,7 +2,7 @@
 >
 > - **First Step**: You must create a ***.env*** file in the root folder
 > - **Second Step**: In the .env file you must type REACT_APP_API_KEY='YOUR_API_KEY'
-> - **HOW TO GET API KEY?**: [Click here](https://developers.giphy.com/dashboard/)
+> - **HOW TO GET API KEY?**: [Click here](https://developers.giphy.com/dashboard/?target=_blank)
 >
 > [![Image from Gyazo](https://i.gyazo.com/abe00f6dc1dc7a4a8ab1bd87f507c84b.png)](https://gyazo.com/abe00f6dc1dc7a4a8ab1bd87f507c84b)
 >
