@@ -15,8 +15,8 @@ export const GifGridItem = ({url, user_profile, user_avatar, username, title, da
                             <a href={ url } target="_blank" rel='noreferrer'>
                                 <img
                                     src={url}
-                                    alt="Placeholder"
-                                    className="rounded-t-xl object-cover h-48 w-full"
+                                    alt={title}
+                                    className="rounded-t-xl object-cover h-48 w-full imageGif"
                                 />
                             </a>
                         </div>
