@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const GifGridItem = ({image} ) => {
+export const GifGridItem = ({url, user_profile, user_avatar, username, title, datetime} ) => {
 
     return(
         <>
@@ -11,9 +11,9 @@ export const GifGridItem = ({image} ) => {
                                              dark:bg-gray-800 bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
                     >
                         <div className="col-span-3 row-span-4 p-1 sm:p-0 m-1">
-                            <a href={ image.url } target="_blank" rel='noreferrer'>
+                            <a href={ url } target="_blank" rel='noreferrer'>
                                 <img
-                                    src={image.url}
+                                    src={url}
                                     alt="Placeholder"
                                     className="rounded-t-xl object-cover h-48 w-full"
                                 />
@@ -25,7 +25,7 @@ export const GifGridItem = ({image} ) => {
                                 <div className="flex flex-row justify-between items-center">
                                     <a
                                         className="flex dark:text-white items-center no-underline hover:underline text-black"
-                                        href={image.user_profile}
+                                        href={user_profile}
                                         target="_blank"
                                         rel='noreferrer'
                                     >
@@ -34,9 +34,9 @@ export const GifGridItem = ({image} ) => {
                                             className="block rounded-full"
                                             width="24px"
                                             height="24px"
-                                            src={ image.user_avatar ? image.user_avatar : '/bag-on-head.png'}
+                                            src={ user_avatar ? user_avatar : '/bag-on-head.png'}
                                         />
-                                        <span className="ml-2 text-sm dark:text-white"> {image.username} </span>
+                                        <span className="ml-2 text-sm dark:text-white"> {username} </span>
                                     </a>
                                 </div>
                             </div>
@@ -47,11 +47,11 @@ export const GifGridItem = ({image} ) => {
                                 className="flex items-center justify-between leading-tight p-2 md:p-4"
                             >
                                 <h1 className="text-lg dark:text-white">
-                                    <a className="no-underline dark:text-white hover:underline text-black" href={image.url} target='_blank' rel='noreferrer'>
-                                        {image.title}
+                                    <a className="no-underline dark:text-white hover:underline text-black" href={url} target='_blank' rel='noreferrer'>
+                                        {title}
                                     </a>
                                 </h1>
-                                <p className="text-grey-darker text-sm">{ image.datetime }</p>
+                                <p className="text-grey-darker text-sm">{ datetime }</p>
                             </header>
                         </div>
 
