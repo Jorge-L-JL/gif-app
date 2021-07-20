@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export const GifGridItem = ({url, user_profile, user_avatar, username, title, datetime} ) => {
 
@@ -73,4 +74,13 @@ export const GifGridItem = ({url, user_profile, user_avatar, username, title, da
             </div>
         </>
     )
+}
+
+GifGridItem.propTypes = {
+    url: PropTypes.string.isRequired,
+    user_profile: PropTypes.string.isRequired,
+    user_avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    datetime: PropTypes.string.isRequired
 }
