@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {AddCategory} from "./components/AddCategory.";
+import {AddCategory} from "./components/AddCategory";
 import {GifGrid} from "./components/GifGrid";
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress'
