@@ -17,7 +17,7 @@ export const useRequestGif = ( category ) => {
                     data: await getGif(category),
                     loading: false
                 })
-            }, 15000)
+            }, 1500)
         }
         fetchData();
     }, [ category ])
