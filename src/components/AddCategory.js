@@ -4,11 +4,14 @@ import PropTypes from 'prop-types'
 
 export const AddCategory = ({setCategories, categories}) => {
 
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState('')
 
 
     const handleInputChange = (el) => {
         setInputValue( el.target.value )
+        console.log(el.target.value)
+        console.log(inputValue)
+        console.log(el)
     }
 
     const handleSubmit = (ev) => {
@@ -19,10 +22,12 @@ export const AddCategory = ({setCategories, categories}) => {
     const handleAddCategory = () => {
         setCategories(categories => [inputValue, ...categories])
         setInputValue('')
+        console.log(categories)
     }
 
     return (
         <form onSubmit={ handleSubmit } className="flex flex-col items-center">
+            <p id='custom-text'>{inputValue} j</p>
             <h1 className="dark:text-white font-mono text-2xl">Save a Category</h1>
             <p className="italic font-mono text-base dark:text-white">When you come back, your category will be saved</p>
             <div className="p-4 flex">
@@ -30,19 +35,19 @@ export const AddCategory = ({setCategories, categories}) => {
                     className="bg-gray-100 dark:placeholder-gray-200 dark:bg-gray-600 w-full rounded-2xl h-8 outline-none p-5 -ml-10 pl-10 font-semibold
                     placeholder-gray-400 dark:text-white mr-7 sm:mr-0.5 focus:ring-yellow-400 dark:focus:ring-indigo-500 focus:ring-2 duration-300"
                     placeholder="Add Category"
+                    id='input-category'
                     value={ inputValue }
                     onChange={ handleInputChange }
                 />
                 <button
                     className="dark:bg-indigo-700 dark:hover:bg-indigo-800 bg-yellow-400 hover:bg-yellow-500 dark:text-white h-8 w-28 text-center rounded-xl
-                     ml-2 p-5 font-semibold flex justify-center items-center"
+                     ml-2 p-5 font-semibold flex justify-center items-center" id='send-category'
                     onClick={ handleAddCategory }
-
                 >
                     Save
                 </button>
             </div>
-            <div className='flex flex-wrap'>
+            <div className='flex flex-wrap' id='category-list'>
                 { categories.map( (category, i) => {
                     return (
                         <li
